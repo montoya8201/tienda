@@ -52,7 +52,9 @@
     <Compile Include="CustomersCoreBusiness.cs" />
     <Compile Include="Interfaces\ICustomersCoreBusiness.cs" />
     <Compile Include="Interfaces\ILogExceptionsCoreBusiness.cs" />
+    <Compile Include="Interfaces\IOrdersCoreBusiness.cs" />
     <Compile Include="LogExceptionsCoreBusiness.cs" />
+    <Compile Include="OrdersCoreBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

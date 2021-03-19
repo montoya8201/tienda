@@ -13,13 +13,13 @@
         <EntityTypeShape EntityType="EVERTECModel.AuditoriaSecurity" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="EVERTECModel.AspNetUsers" Width="1.5" PointX="0.75" PointY="2.375" />
         <EntityTypeShape EntityType="EVERTECModel.Customers" Width="1.5" PointX="3" PointY="9.25" />
-        <EntityTypeShape EntityType="EVERTECModel.Orders" Width="1.5" PointX="5.25" PointY="9.25" />
         <AssociationConnector Association="EVERTECModel.FK__Customers__Custo__73BA3083" />
         <AssociationConnector Association="EVERTECModel.FK_AuditoriaDB_AspNetUsersID" />
         <AssociationConnector Association="EVERTECModel.FK_AuditoriaSecurity_AspNetUsersID" />
-        <AssociationConnector Association="EVERTECModel.FK__Orders__Customer__72C60C4A" />
         <EntityTypeShape EntityType="EVERTECModel.LogExceptions" Width="1.5" PointX="3" PointY="13.125" />
         <AssociationConnector Association="EVERTECModel.FK_LogExceptions_AspNetUsersID" />
+        <EntityTypeShape EntityType="EVERTECModel.Orders" Width="1.5" PointX="5.25" PointY="9.125" />
+        <AssociationConnector Association="EVERTECModel.FK__Orders__Customer__72C60C4A" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

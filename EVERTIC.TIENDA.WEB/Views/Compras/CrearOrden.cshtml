@@ -1,0 +1,77 @@
+﻿<div class="content-heading">
+    <div>
+        Nueva orden
+        <small>Módulo para crear una orden de compra.</small>
+    </div>
+</div>
+
+<div class=" container-fluid">
+
+    <div class=" row">
+        <div class=" col-xl-12">
+
+            <div class=" card card-default">
+                <div class=" card-body">
+
+                    <div class="card card-default">
+                        <div class="card-header text-purple">
+                            <h4>Información para realizar la orden</h4>
+                        </div>
+                        <form method="post" action="#" id="formCrearOrdenDeCompra">
+                            @Html.AntiForgeryToken()
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label class="col-form-label">Producto<span class="campo-obligatorio-sigma">*</span></label>
+                                            <div class="input-group with-focus">
+                                                <input class="form-control border-right-0" type="text" readonly id="txtProducto" name="txtProducto" value="PLAY STATION 5" />
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text text-muted bg-transparent border-left-0">
+                                                        <em class="fa fa-clipboard"></em>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label class="col-form-label">Cantidad<span class="campo-obligatorio-sigma">*</span></label>
+                                            <div class="input-group with-focus">
+                                                <input class="form-control border-right-0 numerico" type="text" onkeyup="digitsOnly(this);" name="txtCantidad" id="txtCantidad" min="1" placeholder="1" autocomplete="off" required="required" data-parsley-length="[1, 2]" data-parsley-type="integer" />
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text text-muted bg-transparent border-left-0">
+                                                        <em class="fa fa-clipboard"></em>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <button type="submit" id="guardarOrdenDeCompra" class="btn btn-block btn-purple mt-3"><span class="glyphicon glyphicon-ok"></span>Guardar</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+
+
+            operacionesComercio.crearOrdenDeCompraAsync();
+
+        });
+
+    </script>
+}

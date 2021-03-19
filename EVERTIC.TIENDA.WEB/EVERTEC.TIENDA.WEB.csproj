@@ -362,6 +362,7 @@
     <Content Include="Scripts\modules\charts\morris.js" />
     <Content Include="Scripts\modules\charts\rickshaw.js" />
     <Content Include="Scripts\modules\charts\sparkline.js" />
+    <Content Include="Scripts\modules\comercio\Comercio.js" />
     <Content Include="Scripts\modules\common\bootstrap-start.js" />
     <Content Include="Scripts\modules\common\card-tools.js" />
     <Content Include="Scripts\modules\common\constants.js" />
@@ -784,6 +785,7 @@
     <Content Include="Vendor\jqwidgets-framework\jqwidgets\styles\images\Thumbs.db" />
     <Content Include="Views\Home\AccessDenied.cshtml" />
     <Content Include="Views\Security\CrearCuenta.cshtml" />
+    <Content Include="Views\Compras\CrearOrden.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Adjuntos\ProgramasAcademicos\" />
@@ -798,7 +800,6 @@
     <Folder Include="Vendor\jqwidgets-framework\jqwidgets\styles\images\smoothness\" />
     <Folder Include="Vendor\jqwidgets-framework\jqwidgets\styles\images\start\" />
     <Folder Include="Vendor\jqwidgets-framework\jqwidgets\styles\images\sunny\" />
-    <Folder Include="Views\Compras\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
