@@ -154,6 +154,14 @@
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PlacetoPay.Integrations.Library.CSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59c45d2d166c43f7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\PlacetoPay.Integrations.Library.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=100.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="Rotativa, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Rotativa.1.7.3\lib\net461\Rotativa.dll</HintPath>
     </Reference>
@@ -255,6 +263,7 @@
     <Compile Include="Controllers\ComprasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ParentController.cs" />
     <Compile Include="Controllers\SecurityController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -801,6 +810,7 @@
     <Folder Include="Vendor\jqwidgets-framework\jqwidgets\styles\images\smoothness\" />
     <Folder Include="Vendor\jqwidgets-framework\jqwidgets\styles\images\start\" />
     <Folder Include="Vendor\jqwidgets-framework\jqwidgets\styles\images\sunny\" />
+    <Folder Include="Views\Parent\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">

@@ -56,7 +56,7 @@
                                     </td>
 
                                     <td class=" text-center">
-                                        <button title="Pagar" data-toggle="tooltip" data-placement="right" class="btn btn-sm btn-outline-green btn-circle" onclick="productosPorCompra.generarFactura(this)" value="@item.OrderID"><em class="fa-2x fas fa-money-bill"></em></button>
+                                        <button title="Pagar" data-toggle="tooltip" data-placement="right" class="btn btn-sm btn-outline-green btn-circle" onclick="operacionesComercio.iniciarPago(@item.OrderID)" ><em class="fa-2x fas fa-credit-card"></em></button>
                                     </td>
                                 </tr>
                             }
