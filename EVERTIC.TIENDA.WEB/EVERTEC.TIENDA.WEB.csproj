@@ -252,6 +252,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ComprasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SecurityController.cs" />
@@ -797,6 +798,7 @@
     <Folder Include="Vendor\jqwidgets-framework\jqwidgets\styles\images\smoothness\" />
     <Folder Include="Vendor\jqwidgets-framework\jqwidgets\styles\images\start\" />
     <Folder Include="Vendor\jqwidgets-framework\jqwidgets\styles\images\sunny\" />
+    <Folder Include="Views\Compras\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">

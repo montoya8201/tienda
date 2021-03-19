@@ -31,94 +31,34 @@
                 </li>
 
                 <li class="@Html.isActive(controller: "Comercio")">
-                    <a href="#elements" title="Comercio" data-toggle="collapse">
+                    <a href="#elements" title="Operaciones" data-toggle="collapse">
                         <em class="icon-credit-card"></em>
-                        <span data-localize="sidebar.nav.element.ELEMENTS">Comercio</span>
+                        <span data-localize="sidebar.nav.element.ELEMENTS">Operaciones</span>
                     </a>
                     <ul id="elements" class="sidebar-nav sidebar-subnav collapse">
                         <li class="sidebar-subnav-header">Elements</li>
-                        <li class="@Html.isActive("Elements", "Buttons")">
-                            <a href="@Url.Action("Buttons", "Elements")" title="Buttons">
-                                <span data-localize="sidebar.nav.element.BUTTON">Buttons</span>
+                        <li class="@Html.isActive("Compras", "Orden")">
+                            <a href="@Url.Action("Orden", "Compras")" title="Nueva orden">
+                                <span data-localize="sidebar.nav.element.BUTTON">Nueva orden</span>
                             </a>
                         </li>
-                        <li class="@Html.isActive("Elements", "Notifications") ">
-                            <a href="@Url.Action("Notifications", "Elements")" title="Notifications">
-                                <span data-localize="sidebar.nav.element.NOTIFICATION">Notifications</span>
+                        <li class="@Html.isActive("Compras", "ResumenOrden") ">
+                            <a href="@Url.Action("ResumenOrden", "Compras")" title="Resumen de la orden">
+                                <span data-localize="sidebar.nav.element.NOTIFICATION">Resumen de la orden</span>
                             </a>
                         </li>
-                        <li class="@Html.isActive("Elements", "SweetAlert") ">
-                            <a href="@Url.Action("SweetAlert", "Elements")" title="SweetAlert">
-                                <span>Sweet Alert</span>
+                        <li class="@Html.isActive("Compras", "EstadoOrden") ">
+                            <a href="@Url.Action("EstadoOrden", "Compras")" title="Estado de la orden">
+                                <span>Estado de la orden</span>
                             </a>
                         </li>
-                        <li class="@Html.isActive("Elements", "Carousel")">
-                            <a href="@Url.Action("Carousel", "Elements")" title="Carousel">
-                                <span data-localize="sidebar.nav.element.INTERACTION">Carousel</span>
+
+                        <li class="@Html.isActive("Compras", "ListadoOrdenes")">
+                            <a href="@Url.Action("ListadoOrdenes", "Compras")" title="Listado de las ordenes">
+                                <span data-localize="sidebar.nav.element.SPINNER">Listado de las ordenes</span>
                             </a>
                         </li>
-                        <li class="@Html.isActive("Elements", "Spinners")">
-                            <a href="@Url.Action("Spinners", "Elements")" title="Spinners">
-                                <span data-localize="sidebar.nav.element.SPINNER">Spinners</span>
-                            </a>
-                        </li>
-                        <li class="@Html.isActive("Elements", "DropdownAnimations")">
-                            <a href="@Url.Action("DropdownAnimations", "Elements")" title="Dropdown">
-                                <span data-localize="sidebar.nav.element.DROPDOWN">Dropdown</span>
-                            </a>
-                        </li>
-                        <li class="@Html.isActive("Elements", "Nestable")">
-                            <a href="@Url.Action("Nestable", "Elements")" title="Nestable">
-                                <span>Nestable</span>
-                            </a>
-                        </li>
-                        <li class="@Html.isActive("Elements", "Sortable")">
-                            <a href="@Url.Action("Sortable", "Elements")" title="Sortable">
-                                <span>Sortable</span>
-                            </a>
-                        </li>
-                        <li class="@Html.isActive("Elements", "Cards")">
-                            <a href="@Url.Action("Cards", "Elements")" title="Cards">
-                                <span data-localize="sidebar.nav.element.CARDS">Cards</span>
-                            </a>
-                        </li>
-                        <li class="@Html.isActive("Elements", "Portlets")">
-                            <a href="@Url.Action("Portlets", "Elements")" title="Portlets">
-                                <span data-localize="sidebar.nav.element.PORTLET">Portlets</span>
-                            </a>
-                        </li>
-                        <li class="@Html.isActive("Elements", "Grid")">
-                            <a href="@Url.Action("Grid", "Elements")" title="Grid">
-                                <span data-localize="sidebar.nav.element.GRID">Grid</span>
-                            </a>
-                        </li>
-                        <li class="@Html.isActive("Elements", "GridMasonry")">
-                            <a href="@Url.Action("GridMasonry", "Elements")" title="Grid Masonry">
-                                <span data-localize="sidebar.nav.element.GRID_MASONRY">Grid Masonry</span>
-                            </a>
-                        </li>
-                        <li class="@Html.isActive("Elements", "Typo")">
-                            <a href="@Url.Action("Typo", "Elements")" title="Typography">
-                                <span data-localize="sidebar.nav.element.TYPO">Typography</span>
-                            </a>
-                        </li>
-                        <li class="@Html.isActive("Elements", "IconsFont")">
-                            <a href="@Url.Action("IconsFont", "Elements")" title="Font Icons">
-                                <div class="badge badge-success float-right">+400</div>
-                                <span data-localize="sidebar.nav.element.FONT_ICON">Font Icons</span>
-                            </a>
-                        </li>
-                        <li class="@Html.isActive("Elements", "IconsWeather")">
-                            <a href="@Url.Action("IconsWeather", "Elements")" title="Weather Icons">
-                                <div class="badge badge-success float-right">+100</div>
-                                <span data-localize="sidebar.nav.element.WEATHER_ICON">Weather Icons</span>
-                            </a>
-                        </li>
-                        <li class="@Html.isActive("Elements", "Colors")">
-                            <a href="@Url.Action("Colors", "Elements")" title="Colors">
-                                <span data-localize="sidebar.nav.element.COLOR">Colors</span>
-                            </a>
-                        </li>
+
                     </ul>
                 </li>
             }
@@ -127,5 +67,3 @@
 
     </nav>
 </div>
-
-<script src="~/Scripts/modules/common/sidebar.js"></script>

@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 
 /EVERTIC.TIENDA.WEB/Scripts/app.js
+*.xml

@@ -42,7 +42,8 @@
                 <div class="form-group">
                     <label class="col-form-label">Celular<span class="campo-obligatorio-sigma">*</span></label>
                     <div class=" input-group with-focus">
-                        <input class="form-control required text-uppercase" celularCol="^[\d\+\-\.\(\)\/\s]*$" data-masked="" data-inputmask="'mask': '(399) 999-9999'" placeholder="(399) 999-9999" autocomplete="off" id="Mobile" name="Mobile" type="text" />
+
+                        <input class="form-control border-right-0 " data-parsley-pattern="^[\d\+\-\.\(\)\/\s]*$" data-masked="" data-inputmask="'mask': '(399) 999-9999'" type="text" name="Mobile" id="Mobile" placeholder="(399) 999-9999" autocomplete="off" required="required" />
                         <div class="input-group-append">
                             <span class="input-group-text text-muted bg-transparent border-left-0">
                                 <em class="fa fa-phone"></em>
@@ -88,14 +89,14 @@
 
 @section Scripts {
 
-    <script src="@Scripts.Url("~/Vendor/jquery-validation/dist/jquery.validate.js")"></script>
-    <script src="@Scripts.Url("~/ScriptsPropios/additional-methods.js")"></script>
-    <script src="@Scripts.Url("~/Vendor/jquery-steps/build/jquery.steps.js")"></script>
-    <script src="@Scripts.Url("~/Vendor/jquery-validation/dist/localization/messages_es.js")"></script>
+
+
 
     <script type="text/javascript">
 
         $(document).ready(function () {
+
+
 
             security_CrearUsuario.crearUsuario();
 
