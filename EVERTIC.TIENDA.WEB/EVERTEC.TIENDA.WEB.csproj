@@ -786,6 +786,7 @@
     <Content Include="Views\Home\AccessDenied.cshtml" />
     <Content Include="Views\Security\CrearCuenta.cshtml" />
     <Content Include="Views\Compras\CrearOrden.cshtml" />
+    <Content Include="Views\Compras\ResumenOrden.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Adjuntos\ProgramasAcademicos\" />

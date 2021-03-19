@@ -26,6 +26,13 @@ namespace EVERTEC.TIENDA.WEB.Controllers
             return View();
         }
 
+        public async Task<ActionResult> ResumenOrden()
+        {
+            string Status = EnumStatus.CREATED.ToString();
+            string CustomerID = User.Identity.GetUserId();
+            var lista = await _IOrdersCoreBusiness.FindWhereAsync(x => x.CustomerID == CustomerID && x.Status == Status);
+            return View(lista);
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
