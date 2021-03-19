@@ -10,7 +10,7 @@ var security_CrearUsuario = {
 
         $("#formCrearGlobal").submit(function (e) {
             try {
-
+                debugger;
                 e.preventDefault();
 
                 var form = $(this);
@@ -35,9 +35,8 @@ var security_CrearUsuario = {
 
                             if (response.msn === "success") {
 
-                                security_Index.getUsuariosConRoles();
-                                security_Index.getAllRoles();
                                 swal("Notificación", "El usuario se creo correctamente en el sistema.", "success");
+                                window.location = rootHost + "Home/Index";
 
                             } else {
 

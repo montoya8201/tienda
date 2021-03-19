@@ -9,7 +9,7 @@ namespace EVERTEC.TIENDA.WEB.Models
     public class ApplicationUser : IdentityUser
     {
         public DateTime DateCreated { get; set; }
-        public string Documento { get; set; }
+    
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {

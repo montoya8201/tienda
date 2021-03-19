@@ -61,7 +61,7 @@ namespace EVERTEC.TIENDA.WEB.Models
 
         [Display(Name = "Remember me?")]
         public bool RememberMe { get; set; }
-        public string Documento { get; set; }
+      
     }
 
     public class RegisterViewModel
@@ -87,6 +87,8 @@ namespace EVERTEC.TIENDA.WEB.Models
         public string UserName { get; set; }
 
         public DateTime DateCreated { get; set; }
+
+        public string Mobile { get; set; }
     }
 
     public class ResetPasswordViewModel

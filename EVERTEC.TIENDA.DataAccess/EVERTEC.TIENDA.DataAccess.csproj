@@ -54,9 +54,7 @@
     <Compile Include="CRUDGenerico.cs" />
     <Compile Include="EFBase.cs" />
     <Compile Include="Interfaces\ICRUDGenerico.cs" />
-    <Compile Include="Interfaces\ICustomers.cs" />
     <Compile Include="Interfaces\ILogExceptionsDataProvider.cs" />
-    <Compile Include="Interfaces\IOrders.cs" />
     <Compile Include="LogExceptionsDataProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,12 +1,11 @@
 ﻿using EVERTEC.TIENDA.CoreBusiness;
+using EVERTEC.TIENDA.CoreBusiness.Interfaces;
 using EVERTEC.TIENDA.Entities;
 using EVERTEC.TIENDA.WEB.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -14,7 +13,7 @@ using static EVERTEC.TIENDA.Across.Enumeraciones;
 
 namespace EVERTEC.TIENDA.WEB.Controllers
 {
-    [Authorize]
+
     public class SecurityController : Controller
     {
 
@@ -44,30 +43,18 @@ namespace EVERTEC.TIENDA.WEB.Controllers
             }
         }
 
-        LogExceptionsCoreBusiness _logExceptionsCoreBusiness => new LogExceptionsCoreBusiness();
-
         private CommonCoreBusiness _CommonCoreBusiness { get { return new CommonCoreBusiness(); } }
 
-
-
-
+        private ICustomersCoreBusiness _ICustomersCoreBusiness { get { return new CustomersCoreBusiness(); } }
 
         #endregion Variables
 
-        [Authorize(Roles = "Administrador")]
+
         public ActionResult Index() => View();
 
         public ActionResult UsersOnline() => View();
 
         #region Admnistar Usuarios
-
-
-        [HttpGet]
-        public ActionResult CrearUsuario()
-        {
-
-            return View("_CrearUsuario", new RegisterViewModel());
-        }
 
 
 
@@ -83,7 +70,8 @@ namespace EVERTEC.TIENDA.WEB.Controllers
                 Modelo.UserName = collection["UserName"].ToString().Trim().ToUpper();
                 Modelo.Email = collection["Email"].ToString().Trim();
                 Modelo.Password = collection["Password"].ToString().Trim();
-         
+                Modelo.Mobile = collection["Mobile"].ToString().Trim();
+
 
                 var user = new ApplicationUser { UserName = Modelo.UserName, Email = Modelo.Email, DateCreated = DateTime.Now };
                 UserManager.PasswordValidator = new PasswordValidator
@@ -100,6 +88,7 @@ namespace EVERTEC.TIENDA.WEB.Controllers
                 if (result.Succeeded)
                 {
 
+                    await _ICustomersCoreBusiness.CreateAsync(new Customers { CustomerID = user.Id, Name = Modelo.UserName, Email = Modelo.Email, Mobile = Modelo.Mobile });
 
                     return Json(new { msn = ReponseType.success.ToString() }, JsonRequestBehavior.AllowGet);
                 }
@@ -130,7 +119,7 @@ namespace EVERTEC.TIENDA.WEB.Controllers
         {
             try
             {
-     
+
 
 
                 string Mensaje = string.Empty;
@@ -278,7 +267,7 @@ namespace EVERTEC.TIENDA.WEB.Controllers
                 var user = await UserManager.FindByEmailAsync(Email);
                 if (user == null)
                 {
-                    
+
                     return Json(new { msn = "Por favor revise su correo electrónico para restablecer su contraseña." });
                 }
 
@@ -292,6 +281,11 @@ namespace EVERTEC.TIENDA.WEB.Controllers
                 return Json(new { error = Mensaje, msn = "" }, JsonRequestBehavior.AllowGet);
             }
 
+        }
+        [AllowAnonymous]
+        public ActionResult CrearCuenta()
+        {
+            return View();
         }
 
     }

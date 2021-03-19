@@ -78,10 +78,6 @@
     <Reference Include="FastMember, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FastMember.1.5.0\lib\net461\FastMember.dll</HintPath>
     </Reference>
-    <Reference Include="HGInetFeAPI, Version=2020.6.1.1, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>HGInetAPI\Facturacion Electronica\HGInetFeAPI.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
     </Reference>
@@ -401,14 +397,7 @@
     <Content Include="Scripts\modules\maps\vector.map.js" />
     <Content Include="Scripts\modules\pages\pages.js" />
     <Content Include="Scripts\modules\security\Index.js" />
-    <Content Include="Scripts\modules\security\_CrearModulo.js" />
-    <Content Include="Scripts\modules\security\_CrearModuloDetalle.js" />
-    <Content Include="Scripts\modules\security\_CrearRol.js" />
     <Content Include="Scripts\modules\security\_CrearUsuario.js" />
-    <Content Include="Scripts\modules\security\_EditarModulo.js" />
-    <Content Include="Scripts\modules\security\_EditarModuloDetalle.js" />
-    <Content Include="Scripts\modules\security\_EditarRol.js" />
-    <Content Include="Scripts\modules\security\_EditarUsuario.js" />
     <Content Include="ScriptsPropios\parsley.js" />
     <Content Include="ScriptsPropios\Utilidades.js" />
     <Content Include="Vendor\%40fortawesome\fontawesome-free-webfonts\css\fa-brands.css" />
@@ -793,6 +782,7 @@
     <Content Include="Vendor\glob-stream\README.md" />
     <Content Include="Vendor\jqwidgets-framework\jqwidgets\styles\images\Thumbs.db" />
     <Content Include="Views\Home\AccessDenied.cshtml" />
+    <Content Include="Views\Security\CrearCuenta.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Adjuntos\ProgramasAcademicos\" />
@@ -1004,6 +994,10 @@
     <ProjectReference Include="..\EVERTEC.TIENDA.CoreBusiness\EVERTEC.TIENDA.CoreBusiness.csproj">
       <Project>{371d1a8a-ab20-4508-bff4-aff808abf384}</Project>
       <Name>EVERTEC.TIENDA.CoreBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EVERTEC.TIENDA.DataAccess\EVERTEC.TIENDA.DataAccess.csproj">
+      <Project>{8E3A78D4-DFC5-478F-B96F-76FBC60CBFFF}</Project>
+      <Name>EVERTEC.TIENDA.DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\EVERTEC.TIENDA.Entities\EVERTEC.TIENDA.Entities.csproj">
       <Project>{daaf64f3-8aac-4f28-8a71-4638b82d0db7}</Project>

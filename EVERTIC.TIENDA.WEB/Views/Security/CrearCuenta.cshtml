@@ -1,0 +1,105 @@
+﻿@{
+    ViewBag.Title = "Crear cuenta";
+}
+<div class="content-heading">
+    <div>
+        Crear cuenta
+        <small>Formulario para crear una cuenta como cliente de la tienda</small>
+    </div>
+</div>
+<div class="card  block-center mt-4 wd-xl card-sigma">
+    <!-- START card-->
+    <div class="card card-flat">
+
+        <div class="card-body">
+
+            <form method="post" action="#" id="formCrearGlobal">
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    <label class="col-form-label" for="Email">Correo<span class="campo-obligatorio-sigma">*</span></label>
+                    <div class=" input-group with-focus">
+                        <input class="form-control border-right-0" type="email" name="Email" id="Email" placeholder="Email" autocomplete="off" required="required" />
+                        <div class="input-group-append">
+                            <span class="input-group-text text-muted bg-transparent border-left-0">
+                                <em class="fa fa-envelope"></em>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-form-label" for="UserName">Nombres y Apellidos<span class="campo-obligatorio-sigma">*</span></label>
+                    <div class=" input-group with-focus">
+                        <input class="form-control border-right-0" type="text" name="UserName" id="UserName" placeholder="Nombres y Apellidos" required="required" data-parsley-length="[7, 60]" />
+                        <div class="input-group-append">
+                            <span class="input-group-text text-muted bg-transparent border-left-0">
+                                <em class="fa fa-user"></em>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-form-label">Celular<span class="campo-obligatorio-sigma">*</span></label>
+                    <div class=" input-group with-focus">
+                        <input class="form-control required text-uppercase" celularCol="^[\d\+\-\.\(\)\/\s]*$" data-masked="" data-inputmask="'mask': '(399) 999-9999'" placeholder="(399) 999-9999" autocomplete="off" id="Mobile" name="Mobile" type="text" />
+                        <div class="input-group-append">
+                            <span class="input-group-text text-muted bg-transparent border-left-0">
+                                <em class="fa fa-phone"></em>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-form-label" for="Password">Contraseña<span class="campo-obligatorio-sigma">*</span></label>
+                    <div class=" input-group with-focus">
+                        <input class="form-control border-right-0" type="password" name="Password" id="Password" placeholder="Contraseña" required="required" data-parsley-pattern="(?=^.{5,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" data-parsley-pattern-message="Debe contener una letra minúscula, una letra mayúscula, un número o caracter especial y mínimo 5 caracteres." />
+                        <div class="input-group-append">
+                            <span class="input-group-text text-muted bg-transparent border-left-0">
+                                <em class="fa fa-lock"></em>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-form-label" for="ConfirmPassword">Confirmar Contraseña<span class="campo-obligatorio-sigma">*</span></label>
+                    <div class=" input-group with-focus">
+                        <input class="form-control border-right-0" type="password" name="ConfirmPassword" id="ConfirmPassword" placeholder="Confirmar Contraseña" required="required" data-parsley-equalto="#Password" />
+                        <div class="input-group-append">
+                            <span class="input-group-text text-muted bg-transparent border-left-0">
+                                <em class="fa fa-lock"></em>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <button class="btn btn-block btn-purple mt-3" type="submit">Crear</button>
+
+            </form>
+        </div>
+    </div>
+    <!-- END card-->
+
+</div>
+
+
+@section Scripts {
+
+    <script src="@Scripts.Url("~/Vendor/jquery-validation/dist/jquery.validate.js")"></script>
+    <script src="@Scripts.Url("~/ScriptsPropios/additional-methods.js")"></script>
+    <script src="@Scripts.Url("~/Vendor/jquery-steps/build/jquery.steps.js")"></script>
+    <script src="@Scripts.Url("~/Vendor/jquery-validation/dist/localization/messages_es.js")"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            security_CrearUsuario.crearUsuario();
+
+        });
+
+    </script>
+}
