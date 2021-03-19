@@ -1,0 +1,131 @@
+﻿
+<div class="aside-inner">
+    <nav class="sidebar" data-sidebar-anyclick-close="">
+        <!-- START sidebar nav-->
+        <ul class="sidebar-nav tree">
+            <!-- START user info-->
+            @if (User.Identity.IsAuthenticated)
+            {
+                <li class="has-user-block">
+                    <div id="user-block" class="collapse">
+                        <div class="item user-block">
+                            <!-- User picture-->
+                            <div class="user-block-picture">
+                                <div class="user-block-status">
+                                    <img src="~/Content/Images/user/user.jpg" alt="Avatar" width="60" height="60" class="img-thumbnail rounded-circle" />
+                                    <div class="circle bg-success circle-lg"></div>
+                                </div>
+                            </div>
+                            <!-- Name and Job-->
+                            <div class="user-block-info">
+                                <span class="user-block-name">@User.Identity.Name</span>
+
+                                <button onclick="security_Index.logOff();" class="btn btn-xs btn-danger">Cerrar Sesión</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-heading">
+                    <span>Menú de navegación</span>
+                </li>
+
+                <li class="@Html.isActive(controller: "Comercio")">
+                    <a href="#elements" title="Comercio" data-toggle="collapse">
+                        <em class="icon-credit-card"></em>
+                        <span data-localize="sidebar.nav.element.ELEMENTS">Comercio</span>
+                    </a>
+                    <ul id="elements" class="sidebar-nav sidebar-subnav collapse">
+                        <li class="sidebar-subnav-header">Elements</li>
+                        <li class="@Html.isActive("Elements", "Buttons")">
+                            <a href="@Url.Action("Buttons", "Elements")" title="Buttons">
+                                <span data-localize="sidebar.nav.element.BUTTON">Buttons</span>
+                            </a>
+                        </li>
+                        <li class="@Html.isActive("Elements", "Notifications") ">
+                            <a href="@Url.Action("Notifications", "Elements")" title="Notifications">
+                                <span data-localize="sidebar.nav.element.NOTIFICATION">Notifications</span>
+                            </a>
+                        </li>
+                        <li class="@Html.isActive("Elements", "SweetAlert") ">
+                            <a href="@Url.Action("SweetAlert", "Elements")" title="SweetAlert">
+                                <span>Sweet Alert</span>
+                            </a>
+                        </li>
+                        <li class="@Html.isActive("Elements", "Carousel")">
+                            <a href="@Url.Action("Carousel", "Elements")" title="Carousel">
+                                <span data-localize="sidebar.nav.element.INTERACTION">Carousel</span>
+                            </a>
+                        </li>
+                        <li class="@Html.isActive("Elements", "Spinners")">
+                            <a href="@Url.Action("Spinners", "Elements")" title="Spinners">
+                                <span data-localize="sidebar.nav.element.SPINNER">Spinners</span>
+                            </a>
+                        </li>
+                        <li class="@Html.isActive("Elements", "DropdownAnimations")">
+                            <a href="@Url.Action("DropdownAnimations", "Elements")" title="Dropdown">
+                                <span data-localize="sidebar.nav.element.DROPDOWN">Dropdown</span>
+                            </a>
+                        </li>
+                        <li class="@Html.isActive("Elements", "Nestable")">
+                            <a href="@Url.Action("Nestable", "Elements")" title="Nestable">
+                                <span>Nestable</span>
+                            </a>
+                        </li>
+                        <li class="@Html.isActive("Elements", "Sortable")">
+                            <a href="@Url.Action("Sortable", "Elements")" title="Sortable">
+                                <span>Sortable</span>
+                            </a>
+                        </li>
+                        <li class="@Html.isActive("Elements", "Cards")">
+                            <a href="@Url.Action("Cards", "Elements")" title="Cards">
+                                <span data-localize="sidebar.nav.element.CARDS">Cards</span>
+                            </a>
+                        </li>
+                        <li class="@Html.isActive("Elements", "Portlets")">
+                            <a href="@Url.Action("Portlets", "Elements")" title="Portlets">
+                                <span data-localize="sidebar.nav.element.PORTLET">Portlets</span>
+                            </a>
+                        </li>
+                        <li class="@Html.isActive("Elements", "Grid")">
+                            <a href="@Url.Action("Grid", "Elements")" title="Grid">
+                                <span data-localize="sidebar.nav.element.GRID">Grid</span>
+                            </a>
+                        </li>
+                        <li class="@Html.isActive("Elements", "GridMasonry")">
+                            <a href="@Url.Action("GridMasonry", "Elements")" title="Grid Masonry">
+                                <span data-localize="sidebar.nav.element.GRID_MASONRY">Grid Masonry</span>
+                            </a>
+                        </li>
+                        <li class="@Html.isActive("Elements", "Typo")">
+                            <a href="@Url.Action("Typo", "Elements")" title="Typography">
+                                <span data-localize="sidebar.nav.element.TYPO">Typography</span>
+                            </a>
+                        </li>
+                        <li class="@Html.isActive("Elements", "IconsFont")">
+                            <a href="@Url.Action("IconsFont", "Elements")" title="Font Icons">
+                                <div class="badge badge-success float-right">+400</div>
+                                <span data-localize="sidebar.nav.element.FONT_ICON">Font Icons</span>
+                            </a>
+                        </li>
+                        <li class="@Html.isActive("Elements", "IconsWeather")">
+                            <a href="@Url.Action("IconsWeather", "Elements")" title="Weather Icons">
+                                <div class="badge badge-success float-right">+100</div>
+                                <span data-localize="sidebar.nav.element.WEATHER_ICON">Weather Icons</span>
+                            </a>
+                        </li>
+                        <li class="@Html.isActive("Elements", "Colors")">
+                            <a href="@Url.Action("Colors", "Elements")" title="Colors">
+                                <span data-localize="sidebar.nav.element.COLOR">Colors</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            }
+
+        </ul>
+
+    </nav>
+</div>
+
+<script src="~/Scripts/modules/common/sidebar.js"></script>

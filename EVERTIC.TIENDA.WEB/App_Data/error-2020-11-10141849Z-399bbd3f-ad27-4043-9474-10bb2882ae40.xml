@@ -1,0 +1,203 @@
+﻿<error errorId="399bbd3f-ad27-4043-9474-10bb2882ae40" application="/LM/W3SVC/2/ROOT" host="LAPTOP-KCV7JKQU" type="System.Web.HttpException" message="A public action method 'GetMunicipioByDepartamentoIDAsync' was not found on controller 'IUSH.SIGMA.WEB.Controllers.InscripcionController'." source="System.Web.Mvc" detail="System.Web.HttpException (0x80004005): A public action method 'GetMunicipioByDepartamentoIDAsync' was not found on controller 'IUSH.SIGMA.WEB.Controllers.InscripcionController'.&#xD;&#xA;   en System.Web.Mvc.Controller.HandleUnknownAction(String actionName)&#xD;&#xA;   en System.Web.Mvc.Controller.&lt;&gt;c.&lt;BeginExecuteCore&gt;b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   en System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   en System.Web.Mvc.Controller.&lt;&gt;c.&lt;BeginExecute&gt;b__151_2(IAsyncResult asyncResult, Controller controller)&#xD;&#xA;   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   en System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   en System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   en System.Web.Mvc.MvcHandler.&lt;&gt;c.&lt;BeginProcessRequest&gt;b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   en System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   en System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   en System.Web.HttpApplication.&lt;&gt;c__DisplayClass285_0.&lt;ExecuteStepImpl&gt;b__0()&#xD;&#xA;   en System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)&#xD;&#xA;   en System.Web.HttpApplication.StepInvoker.&lt;&gt;c__DisplayClass4_0.&lt;Invoke&gt;b__0()&#xD;&#xA;   en Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)&#xD;&#xA;   en System.Web.HttpApplication.&lt;&gt;c__DisplayClass284_0.&lt;OnExecuteRequestStep&gt;b__0(Action nextStepAction)&#xD;&#xA;   en System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)&#xD;&#xA;   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)&#xD;&#xA;   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="JHON MONTOYA" time="2020-11-10T14:18:49.9259179Z" statusCode="404">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:close&#xD;&#xA;HTTP_ACCEPT:*/*&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:es-419,es;q=0.9,es-ES;q=0.8,en;q=0.7,en-GB;q=0.6,en-US;q=0.5&#xD;&#xA;HTTP_COOKIE:_ga=GA1.1.476349917.1588869201; ajs_group_id=null; ajs_anonymous_id=%228d0666bd-1613-4dcc-999f-a97f16af6724%22; __utma=111872281.476349917.1588869201.1591412525.1591412525.1; __utmz=111872281.1591412525.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __RequestVerificationToken=BNEsikNfuc56X2un6mpr0NY0i3bUYdaxqRMCQkgqZTblJ38mpdv23fAWcBeTYU4l5M-SHoi6eqmuCnvReln73kGAVICLHcJx4VRuaN75GGE1; ASP.NET_SessionId=0w01uh0c0irijtcoci5k0aph; .AspNet.ApplicationCookie=8EycAVPZO2ooMcp68IlK_XVq7XVgJPXMvAcYKWheHCHU3vH8lVhrk6hnyRaOafNMdLKUIoUms2PFNGBigsnRO4NMmOnhj7QuQyqQ3jFWCjaBC2GhZ8H_mtR7ENKXvCj2gJKV1TVyoxUQLtd5FU7-lUkaysmn-gKWk0yFMVmfx2CtUi02fjF957RN9X-KwQ2rhBVVgmdq45SOCKy81wYYXD4gnxMseZAB7EejH5JjRmVSXgVfTP7Okx1Z38IDu-AYLAtuF0wvm6lak7h_uYNhh9xqJQVpXpfU3fUDhnN6mwvv7dMiL62d4Vv0nXpUQ42nZDCuJDh_vTrvqsa_4bVUadb48jBsNQOcoWNfl8elaTtSOM5U2pQ8vEiM5EeNxxM4VJ_uxivbS7uAhB2O1ifLffMa8SugFEv-pVykkSOoKmvrezU4tE2bFNYEbRJRb_j1KWlZBPtJCvgOmo6HmNkbcPlerYzy3dK-CJco_6YlnVgEc4REcUGVFvJB5X4WLxp63bWAaZ_keXaOjEXFxSXGcw&#xD;&#xA;HTTP_HOST:localhost:44356&#xD;&#xA;HTTP_REFERER:https://localhost:44356/Inscripcion/Index&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36 Edg/86.0.622.63&#xD;&#xA;HTTP_X_REQUESTED_WITH:XMLHttpRequest&#xD;&#xA;HTTP_SEC_FETCH_SITE:same-origin&#xD;&#xA;HTTP_SEC_FETCH_MODE:cors&#xD;&#xA;HTTP_SEC_FETCH_DEST:empty&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: close&#xD;&#xA;Accept: */*&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: es-419,es;q=0.9,es-ES;q=0.8,en;q=0.7,en-GB;q=0.6,en-US;q=0.5&#xD;&#xA;Cookie: _ga=GA1.1.476349917.1588869201; ajs_group_id=null; ajs_anonymous_id=%228d0666bd-1613-4dcc-999f-a97f16af6724%22; __utma=111872281.476349917.1588869201.1591412525.1591412525.1; __utmz=111872281.1591412525.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __RequestVerificationToken=BNEsikNfuc56X2un6mpr0NY0i3bUYdaxqRMCQkgqZTblJ38mpdv23fAWcBeTYU4l5M-SHoi6eqmuCnvReln73kGAVICLHcJx4VRuaN75GGE1; ASP.NET_SessionId=0w01uh0c0irijtcoci5k0aph; .AspNet.ApplicationCookie=8EycAVPZO2ooMcp68IlK_XVq7XVgJPXMvAcYKWheHCHU3vH8lVhrk6hnyRaOafNMdLKUIoUms2PFNGBigsnRO4NMmOnhj7QuQyqQ3jFWCjaBC2GhZ8H_mtR7ENKXvCj2gJKV1TVyoxUQLtd5FU7-lUkaysmn-gKWk0yFMVmfx2CtUi02fjF957RN9X-KwQ2rhBVVgmdq45SOCKy81wYYXD4gnxMseZAB7EejH5JjRmVSXgVfTP7Okx1Z38IDu-AYLAtuF0wvm6lak7h_uYNhh9xqJQVpXpfU3fUDhnN6mwvv7dMiL62d4Vv0nXpUQ42nZDCuJDh_vTrvqsa_4bVUadb48jBsNQOcoWNfl8elaTtSOM5U2pQ8vEiM5EeNxxM4VJ_uxivbS7uAhB2O1ifLffMa8SugFEv-pVykkSOoKmvrezU4tE2bFNYEbRJRb_j1KWlZBPtJCvgOmo6HmNkbcPlerYzy3dK-CJco_6YlnVgEc4REcUGVFvJB5X4WLxp63bWAaZ_keXaOjEXFxSXGcw&#xD;&#xA;Host: localhost:44356&#xD;&#xA;Referer: https://localhost:44356/Inscripcion/Index&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36 Edg/86.0.622.63&#xD;&#xA;x-requested-with: XMLHttpRequest&#xD;&#xA;sec-fetch-site: same-origin&#xD;&#xA;sec-fetch-mode: cors&#xD;&#xA;sec-fetch-dest: empty&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\Proyectos\IUSH\SIGMA\IUSH.SIGMA\IUSH.SIGMA.WEB\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="JHON MONTOYA" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="JHON MONTOYA" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="JHON MONTOYA" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="256" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="2048" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="CN=localhost" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="CN=localhost" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="on" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="256" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="2048" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="CN=localhost" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="CN=localhost" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Inscripcion/GetMunicipioByDepartamentoIDAsync" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\Proyectos\IUSH\SIGMA\IUSH.SIGMA\IUSH.SIGMA.WEB\Inscripcion\GetMunicipioByDepartamentoIDAsync" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="id=8" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="62008" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Inscripcion/GetMunicipioByDepartamentoIDAsync" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="44356" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="1" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/Inscripcion/GetMunicipioByDepartamentoIDAsync" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="close" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="*/*" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="es-419,es;q=0.9,es-ES;q=0.8,en;q=0.7,en-GB;q=0.6,en-US;q=0.5" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="_ga=GA1.1.476349917.1588869201; ajs_group_id=null; ajs_anonymous_id=%228d0666bd-1613-4dcc-999f-a97f16af6724%22; __utma=111872281.476349917.1588869201.1591412525.1591412525.1; __utmz=111872281.1591412525.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __RequestVerificationToken=BNEsikNfuc56X2un6mpr0NY0i3bUYdaxqRMCQkgqZTblJ38mpdv23fAWcBeTYU4l5M-SHoi6eqmuCnvReln73kGAVICLHcJx4VRuaN75GGE1; ASP.NET_SessionId=0w01uh0c0irijtcoci5k0aph; .AspNet.ApplicationCookie=8EycAVPZO2ooMcp68IlK_XVq7XVgJPXMvAcYKWheHCHU3vH8lVhrk6hnyRaOafNMdLKUIoUms2PFNGBigsnRO4NMmOnhj7QuQyqQ3jFWCjaBC2GhZ8H_mtR7ENKXvCj2gJKV1TVyoxUQLtd5FU7-lUkaysmn-gKWk0yFMVmfx2CtUi02fjF957RN9X-KwQ2rhBVVgmdq45SOCKy81wYYXD4gnxMseZAB7EejH5JjRmVSXgVfTP7Okx1Z38IDu-AYLAtuF0wvm6lak7h_uYNhh9xqJQVpXpfU3fUDhnN6mwvv7dMiL62d4Vv0nXpUQ42nZDCuJDh_vTrvqsa_4bVUadb48jBsNQOcoWNfl8elaTtSOM5U2pQ8vEiM5EeNxxM4VJ_uxivbS7uAhB2O1ifLffMa8SugFEv-pVykkSOoKmvrezU4tE2bFNYEbRJRb_j1KWlZBPtJCvgOmo6HmNkbcPlerYzy3dK-CJco_6YlnVgEc4REcUGVFvJB5X4WLxp63bWAaZ_keXaOjEXFxSXGcw" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:44356" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="https://localhost:44356/Inscripcion/Index" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36 Edg/86.0.622.63" />
+    </item>
+    <item name="HTTP_X_REQUESTED_WITH">
+      <value string="XMLHttpRequest" />
+    </item>
+    <item name="HTTP_SEC_FETCH_SITE">
+      <value string="same-origin" />
+    </item>
+    <item name="HTTP_SEC_FETCH_MODE">
+      <value string="cors" />
+    </item>
+    <item name="HTTP_SEC_FETCH_DEST">
+      <value string="empty" />
+    </item>
+    <item name="HTTP_APPLICATIONINSIGHTS_REQUESTTRACKINGTELEMETRYMODULE_ROOTREQUEST_ID">
+      <value string="d0bd2792-4c84-4157-97a2-308832afe43c" />
+    </item>
+  </serverVariables>
+  <queryString>
+    <item name="id">
+      <value string="8" />
+    </item>
+  </queryString>
+  <cookies>
+    <item name="_ga">
+      <value string="GA1.1.476349917.1588869201" />
+    </item>
+    <item name="ajs_group_id">
+      <value string="null" />
+    </item>
+    <item name="ajs_anonymous_id">
+      <value string="%228d0666bd-1613-4dcc-999f-a97f16af6724%22" />
+    </item>
+    <item name="__utma">
+      <value string="111872281.476349917.1588869201.1591412525.1591412525.1" />
+    </item>
+    <item name="__utmz">
+      <value string="111872281.1591412525.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="BNEsikNfuc56X2un6mpr0NY0i3bUYdaxqRMCQkgqZTblJ38mpdv23fAWcBeTYU4l5M-SHoi6eqmuCnvReln73kGAVICLHcJx4VRuaN75GGE1" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="0w01uh0c0irijtcoci5k0aph" />
+    </item>
+    <item name=".AspNet.ApplicationCookie">
+      <value string="8EycAVPZO2ooMcp68IlK_XVq7XVgJPXMvAcYKWheHCHU3vH8lVhrk6hnyRaOafNMdLKUIoUms2PFNGBigsnRO4NMmOnhj7QuQyqQ3jFWCjaBC2GhZ8H_mtR7ENKXvCj2gJKV1TVyoxUQLtd5FU7-lUkaysmn-gKWk0yFMVmfx2CtUi02fjF957RN9X-KwQ2rhBVVgmdq45SOCKy81wYYXD4gnxMseZAB7EejH5JjRmVSXgVfTP7Okx1Z38IDu-AYLAtuF0wvm6lak7h_uYNhh9xqJQVpXpfU3fUDhnN6mwvv7dMiL62d4Vv0nXpUQ42nZDCuJDh_vTrvqsa_4bVUadb48jBsNQOcoWNfl8elaTtSOM5U2pQ8vEiM5EeNxxM4VJ_uxivbS7uAhB2O1ifLffMa8SugFEv-pVykkSOoKmvrezU4tE2bFNYEbRJRb_j1KWlZBPtJCvgOmo6HmNkbcPlerYzy3dK-CJco_6YlnVgEc4REcUGVFvJB5X4WLxp63bWAaZ_keXaOjEXFxSXGcw" />
+    </item>
+  </cookies>
+</error>

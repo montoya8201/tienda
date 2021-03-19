@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+
+
+<div class="card">
+    <div class="card-body text-center bg-center bannerIUSH">
+        <div class="row">
+            <div class="col-12 text-white">
+                <img class="img-thumbnail circle thumb128" src="~/Content/Images/user/user.jpg" alt="Image" />
+                <h3 class="m-0">EVERTEC Tiendas</h3>
+
+            </div>
+        </div>
+    </div>
+    <div style="padding-bottom:2px;">
+
+    </div>
+    <div class="card-body text-center bg-gray-darker">
+        <div class="row">
+            <div class="col-12">
+                <a class="text-white">
+                    <h3>Jhon Montoya</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="card  block-center mt-4 wd-xl card-sigma">
+        <!-- START card-->
+        <div class="card card-flat">
+
+            <div class="card-body">
+
+                <form class="mb-3" method="post" id="formLogin">
+                    @Html.AntiForgeryToken()
+                    <div class="form-group">
+                        <div class="input-group with-focus">
+                            <input class="form-control border-right-0" id="email" type="email" placeholder="ingrese el email" autocomplete="off" required="required" />
+                            <div class="input-group-append">
+                                <span class="input-group-text text-muted bg-transparent border-left-0">
+                                    <em class="fa fa-envelope"></em>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group with-focus">
+                            <input class="form-control border-right-0" id="password" type="password" placeholder="Clave" required="required" />
+                            <div class="input-group-append">
+                                <span class="input-group-text text-muted bg-transparent border-left-0">
+                                    <em class="fa fa-lock"></em>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <div class="checkbox c-checkbox float-left mt-0">
+                            <label>
+                                <input type="checkbox" id="rememberMe" value="" name="remember" />
+                                <span class="fa fa-check"></span>Recuérdame
+                            </label>
+                        </div>
+                        <div class="float-right">
+                            <a class="text-muted" href="@Url.Action("Recover", "Security")">¿Olvidaste tu contraseña?</a>
+                        </div>
+                    </div>
+                    <button class="btn btn-block btn-purple mt-3" type="submit">Iniciar sesión</button>
+                    <br />
+                    <div class="text-center">
+                        <a class="text-dark" href="@Url.Action("Recover", "Security")">Crear cuenta</a>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Styles {
+
+}
+@section Scripts {
+
+    <script>
+        $(function () {
+            security_Index.login();
+        });
+    </script>
+}
+

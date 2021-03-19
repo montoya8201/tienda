@@ -1,0 +1,212 @@
+﻿<error errorId="7ec6837c-1d25-4b89-bf4d-7eda3f622f20" application="/LM/W3SVC/2/ROOT" host="LAPTOP-KCV7JKQU" type="System.Web.HttpException" message="El host remoto cerró la conexión. El error de código es 0x800704CD." source="System.Web" detail="System.Web.HttpException (0x800704CD): El host remoto cerró la conexión. El error de código es 0x800704CD.&#xD;&#xA;   en System.Web.Hosting.IIS7WorkerRequest.RaiseCommunicationError(Int32 result, Boolean throwOnDisconnect)&#xD;&#xA;   en System.Web.Hosting.IIS7WorkerRequest.ExplicitFlush()&#xD;&#xA;   en System.Web.HttpResponse.Flush(Boolean finalFlush, Boolean async)&#xD;&#xA;   en System.Web.HttpResponse.Flush()&#xD;&#xA;   en System.Web.HttpWriter.WriteFromStream(Byte[] data, Int32 offset, Int32 size)&#xD;&#xA;   en System.Web.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 count)&#xD;&#xA;   en Microsoft.Owin.Host.SystemWeb.CallStreams.OutputStream.Write(Byte[] buffer, Int32 offset, Int32 count)&#xD;&#xA;   en Microsoft.AspNet.SignalR.Owin.ServerResponse.Write(ArraySegment`1 data)&#xD;&#xA;   en Microsoft.AspNet.SignalR.Hosting.ResponseExtensions.End(IResponse response, String data)&#xD;&#xA;   en Microsoft.AspNet.SignalR.PersistentConnection.ProcessRequest(HostContext context)&#xD;&#xA;   en Microsoft.AspNet.SignalR.Hubs.HubDispatcher.ProcessRequest(HostContext context)&#xD;&#xA;   en Microsoft.AspNet.SignalR.PersistentConnection.ProcessRequest(IDictionary`2 environment)&#xD;&#xA;   en Microsoft.AspNet.SignalR.Owin.Middleware.HubDispatcherMiddleware.Invoke(IOwinContext context)&#xD;&#xA;   en Microsoft.Owin.Infrastructure.OwinMiddlewareTransition.Invoke(IDictionary`2 environment)&#xD;&#xA;   en Microsoft.Owin.Mapping.MapMiddleware.&lt;Invoke&gt;d__3.MoveNext()&#xD;&#xA;--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---&#xD;&#xA;   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   en Microsoft.Owin.Host.SystemWeb.IntegratedPipeline.IntegratedPipelineContextStage.&lt;RunApp&gt;d__7.MoveNext()&#xD;&#xA;--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---&#xD;&#xA;   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   en Microsoft.Owin.Security.Infrastructure.AuthenticationMiddleware`1.&lt;Invoke&gt;d__5.MoveNext()&#xD;&#xA;--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---&#xD;&#xA;   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   en Microsoft.Owin.Security.Infrastructure.AuthenticationMiddleware`1.&lt;Invoke&gt;d__5.MoveNext()&#xD;&#xA;--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---&#xD;&#xA;   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   en Microsoft.Owin.Security.Infrastructure.AuthenticationMiddleware`1.&lt;Invoke&gt;d__5.MoveNext()&#xD;&#xA;--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---&#xD;&#xA;   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   en Microsoft.Owin.Security.Infrastructure.AuthenticationMiddleware`1.&lt;Invoke&gt;d__5.MoveNext()&#xD;&#xA;--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---&#xD;&#xA;   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   en Microsoft.AspNet.Identity.Owin.IdentityFactoryMiddleware`2.&lt;Invoke&gt;d__5.MoveNext()&#xD;&#xA;--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---&#xD;&#xA;   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   en Microsoft.AspNet.Identity.Owin.IdentityFactoryMiddleware`2.&lt;Invoke&gt;d__5.MoveNext()&#xD;&#xA;--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---&#xD;&#xA;   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   en Microsoft.AspNet.Identity.Owin.IdentityFactoryMiddleware`2.&lt;Invoke&gt;d__5.MoveNext()&#xD;&#xA;--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---&#xD;&#xA;   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   en Microsoft.Owin.Host.SystemWeb.IntegratedPipeline.IntegratedPipelineContextStage.&lt;RunApp&gt;d__7.MoveNext()&#xD;&#xA;--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---&#xD;&#xA;   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   en Microsoft.Owin.Host.SystemWeb.IntegratedPipeline.IntegratedPipelineContext.&lt;DoFinalWork&gt;d__12.MoveNext()&#xD;&#xA;--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---&#xD;&#xA;   en Microsoft.Owin.Host.SystemWeb.IntegratedPipeline.StageAsyncResult.End(IAsyncResult ar)&#xD;&#xA;   en Microsoft.Owin.Host.SystemWeb.IntegratedPipeline.IntegratedPipelineContext.EndFinalWork(IAsyncResult ar)&#xD;&#xA;   en System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   en System.Web.HttpApplication.&lt;&gt;c__DisplayClass285_0.&lt;ExecuteStepImpl&gt;b__0()&#xD;&#xA;   en System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)&#xD;&#xA;   en System.Web.HttpApplication.StepInvoker.&lt;&gt;c__DisplayClass4_0.&lt;Invoke&gt;b__0()&#xD;&#xA;   en Microsoft.AspNet.TelemetryCorrelation.TelemetryCorrelationHttpModule.OnExecuteRequestStep(HttpContextBase context, Action step)&#xD;&#xA;   en System.Web.HttpApplication.&lt;&gt;c__DisplayClass284_0.&lt;OnExecuteRequestStep&gt;b__0(Action nextStepAction)&#xD;&#xA;   en System.Web.HttpApplication.StepInvoker.Invoke(Action executionStep)&#xD;&#xA;   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)&#xD;&#xA;   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="JHON ALEXANDER MONTOYA PINO" time="2021-02-25T16:36:00.6024088Z" statusCode="500">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:no-cache&#xD;&#xA;HTTP_CONNECTION:close&#xD;&#xA;HTTP_PRAGMA:no-cache&#xD;&#xA;HTTP_CONTENT_LENGTH:0&#xD;&#xA;HTTP_CONTENT_TYPE:application/json; charset=UTF-8&#xD;&#xA;HTTP_ACCEPT:text/plain, */*; q=0.01&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6&#xD;&#xA;HTTP_COOKIE:__RequestVerificationToken=oP-mGv4e8n0Ci0cYJvQcaQhcpfuOJUFloRzE7JuxTMTNiP70kz5Guw92m9GkyB0JKX92ju17H9w6Ld-cj1MLQRJziakl4Wu6wWkXNYUoKPY1; ASP.NET_SessionId=z0ybfh3gdm4xfz5c5det3mlb; .AspNet.ApplicationCookie=XorR4dtJC2f_jD1VUAZFbLGOlD32TGhI9mKuWUeARKrnNWR2glpgl7c7dpn4fT9H0EYkjvqz3i6VPCk8TbhbNAZseu56BU2X5QMguzLMC1pS65-MuYonUgUZQnzEoLBljLz4LxwbFNoVT6y1i0jc_s3SHV4ikLUoARs1POLAhZVcU_EXcdRgWEn7TeGY5PPV-gNDqzZjkAfaGUnjfp-V90m1nL9_Nm7eEaiGp3w7SECy5y6Qo0xnRubGVNFlE0bv3WneoI3mcQZzXQrqWEvxP5_YIazbfIAAammmLGl2jzrvgE3Wr6Dex1P1mB2bsAl1SW9XfqGFv_aE5qUpy-AXG7nLjaV3Ui47Cf9x9cgId8dZQO6W9gldAkUzw2K_9jFqYgwOTqLc3BWhiC3mQ1GxihtPGXRZowhxcrSxbpqbFkUa5Y24hvRiFLpzziEDKBg8EfoJ-8CZ9qEYqOBYNR51hXB7GHZKErJnvRKCsw9KrkLlvuEQNF-QMo2ULroDgUwIGhTDWjpW_bX5UYMwk11ctaRonK2tdtmG7zhuZFS3kz_goVv1j2KzjAeyoMz6Ls0I&#xD;&#xA;HTTP_HOST:localhost:44356&#xD;&#xA;HTTP_REFERER:https://localhost:44356/&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.74&#xD;&#xA;HTTP_X_REQUESTED_WITH:XMLHttpRequest&#xD;&#xA;HTTP_ORIGIN:https://localhost:44356&#xD;&#xA;HTTP_SEC_FETCH_SITE:same-origin&#xD;&#xA;HTTP_SEC_FETCH_MODE:cors&#xD;&#xA;HTTP_SEC_FETCH_DEST:empty&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: no-cache&#xD;&#xA;Connection: close&#xD;&#xA;Pragma: no-cache&#xD;&#xA;Content-Length: 0&#xD;&#xA;Content-Type: application/json; charset=UTF-8&#xD;&#xA;Accept: text/plain, */*; q=0.01&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6&#xD;&#xA;Cookie: __RequestVerificationToken=oP-mGv4e8n0Ci0cYJvQcaQhcpfuOJUFloRzE7JuxTMTNiP70kz5Guw92m9GkyB0JKX92ju17H9w6Ld-cj1MLQRJziakl4Wu6wWkXNYUoKPY1; ASP.NET_SessionId=z0ybfh3gdm4xfz5c5det3mlb; .AspNet.ApplicationCookie=XorR4dtJC2f_jD1VUAZFbLGOlD32TGhI9mKuWUeARKrnNWR2glpgl7c7dpn4fT9H0EYkjvqz3i6VPCk8TbhbNAZseu56BU2X5QMguzLMC1pS65-MuYonUgUZQnzEoLBljLz4LxwbFNoVT6y1i0jc_s3SHV4ikLUoARs1POLAhZVcU_EXcdRgWEn7TeGY5PPV-gNDqzZjkAfaGUnjfp-V90m1nL9_Nm7eEaiGp3w7SECy5y6Qo0xnRubGVNFlE0bv3WneoI3mcQZzXQrqWEvxP5_YIazbfIAAammmLGl2jzrvgE3Wr6Dex1P1mB2bsAl1SW9XfqGFv_aE5qUpy-AXG7nLjaV3Ui47Cf9x9cgId8dZQO6W9gldAkUzw2K_9jFqYgwOTqLc3BWhiC3mQ1GxihtPGXRZowhxcrSxbpqbFkUa5Y24hvRiFLpzziEDKBg8EfoJ-8CZ9qEYqOBYNR51hXB7GHZKErJnvRKCsw9KrkLlvuEQNF-QMo2ULroDgUwIGhTDWjpW_bX5UYMwk11ctaRonK2tdtmG7zhuZFS3kz_goVv1j2KzjAeyoMz6Ls0I&#xD;&#xA;Host: localhost:44356&#xD;&#xA;Referer: https://localhost:44356/&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.74&#xD;&#xA;x-requested-with: XMLHttpRequest&#xD;&#xA;origin: https://localhost:44356&#xD;&#xA;sec-fetch-site: same-origin&#xD;&#xA;sec-fetch-mode: cors&#xD;&#xA;sec-fetch-dest: empty&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\Proyectos\IUSH\SIGMA\IUSH.SIGMA\IUSH.SIGMA.WEB\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="JHON ALEXANDER MONTOYA PINO" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="JHON ALEXANDER MONTOYA PINO" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="JHON ALEXANDER MONTOYA PINO" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="256" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="2048" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="CN=localhost" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="CN=localhost" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/json; charset=UTF-8" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="on" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="256" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="2048" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="CN=localhost" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="CN=localhost" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/signalr/abort" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\Proyectos\IUSH\SIGMA\IUSH.SIGMA\IUSH.SIGMA.WEB\signalr\abort" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="transport=webSockets&amp;clientProtocol=2.1&amp;connectionToken=osI5ZNw6czo5%2BjYvdNCDsRosv55GzsQOtJ2Y%2BNHPuFmUK4TP54ijgORXHCX6bcbPM0mSsi5%2BBy5aOlyQNuED0qqgrJsNTLkHB5RK3vzGL9mnNIFjNS2TNdfIxmDln4cT&amp;connectionData=%5B%7B%22name%22%3A%22trackingonlineusers%22%7D%5D" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="50012" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/signalr/abort" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="44356" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="1" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/signalr/abort" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="no-cache" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="close" />
+    </item>
+    <item name="HTTP_PRAGMA">
+      <value string="no-cache" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/json; charset=UTF-8" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/plain, */*; q=0.01" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="es,es-ES;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__RequestVerificationToken=oP-mGv4e8n0Ci0cYJvQcaQhcpfuOJUFloRzE7JuxTMTNiP70kz5Guw92m9GkyB0JKX92ju17H9w6Ld-cj1MLQRJziakl4Wu6wWkXNYUoKPY1; ASP.NET_SessionId=z0ybfh3gdm4xfz5c5det3mlb; .AspNet.ApplicationCookie=XorR4dtJC2f_jD1VUAZFbLGOlD32TGhI9mKuWUeARKrnNWR2glpgl7c7dpn4fT9H0EYkjvqz3i6VPCk8TbhbNAZseu56BU2X5QMguzLMC1pS65-MuYonUgUZQnzEoLBljLz4LxwbFNoVT6y1i0jc_s3SHV4ikLUoARs1POLAhZVcU_EXcdRgWEn7TeGY5PPV-gNDqzZjkAfaGUnjfp-V90m1nL9_Nm7eEaiGp3w7SECy5y6Qo0xnRubGVNFlE0bv3WneoI3mcQZzXQrqWEvxP5_YIazbfIAAammmLGl2jzrvgE3Wr6Dex1P1mB2bsAl1SW9XfqGFv_aE5qUpy-AXG7nLjaV3Ui47Cf9x9cgId8dZQO6W9gldAkUzw2K_9jFqYgwOTqLc3BWhiC3mQ1GxihtPGXRZowhxcrSxbpqbFkUa5Y24hvRiFLpzziEDKBg8EfoJ-8CZ9qEYqOBYNR51hXB7GHZKErJnvRKCsw9KrkLlvuEQNF-QMo2ULroDgUwIGhTDWjpW_bX5UYMwk11ctaRonK2tdtmG7zhuZFS3kz_goVv1j2KzjAeyoMz6Ls0I" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:44356" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="https://localhost:44356/" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.74" />
+    </item>
+    <item name="HTTP_X_REQUESTED_WITH">
+      <value string="XMLHttpRequest" />
+    </item>
+    <item name="HTTP_ORIGIN">
+      <value string="https://localhost:44356" />
+    </item>
+    <item name="HTTP_SEC_FETCH_SITE">
+      <value string="same-origin" />
+    </item>
+    <item name="HTTP_SEC_FETCH_MODE">
+      <value string="cors" />
+    </item>
+    <item name="HTTP_SEC_FETCH_DEST">
+      <value string="empty" />
+    </item>
+    <item name="HTTP_APPLICATIONINSIGHTS_REQUESTTRACKINGTELEMETRYMODULE_ROOTREQUEST_ID">
+      <value string="d4064ea3-33f8-4090-b00b-e5d4c45542da" />
+    </item>
+  </serverVariables>
+  <queryString>
+    <item name="transport">
+      <value string="webSockets" />
+    </item>
+    <item name="clientProtocol">
+      <value string="2.1" />
+    </item>
+    <item name="connectionToken">
+      <value string="osI5ZNw6czo5+jYvdNCDsRosv55GzsQOtJ2Y+NHPuFmUK4TP54ijgORXHCX6bcbPM0mSsi5+By5aOlyQNuED0qqgrJsNTLkHB5RK3vzGL9mnNIFjNS2TNdfIxmDln4cT" />
+    </item>
+    <item name="connectionData">
+      <value string="[{&quot;name&quot;:&quot;trackingonlineusers&quot;}]" />
+    </item>
+  </queryString>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="oP-mGv4e8n0Ci0cYJvQcaQhcpfuOJUFloRzE7JuxTMTNiP70kz5Guw92m9GkyB0JKX92ju17H9w6Ld-cj1MLQRJziakl4Wu6wWkXNYUoKPY1" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="z0ybfh3gdm4xfz5c5det3mlb" />
+    </item>
+    <item name=".AspNet.ApplicationCookie">
+      <value string="XorR4dtJC2f_jD1VUAZFbLGOlD32TGhI9mKuWUeARKrnNWR2glpgl7c7dpn4fT9H0EYkjvqz3i6VPCk8TbhbNAZseu56BU2X5QMguzLMC1pS65-MuYonUgUZQnzEoLBljLz4LxwbFNoVT6y1i0jc_s3SHV4ikLUoARs1POLAhZVcU_EXcdRgWEn7TeGY5PPV-gNDqzZjkAfaGUnjfp-V90m1nL9_Nm7eEaiGp3w7SECy5y6Qo0xnRubGVNFlE0bv3WneoI3mcQZzXQrqWEvxP5_YIazbfIAAammmLGl2jzrvgE3Wr6Dex1P1mB2bsAl1SW9XfqGFv_aE5qUpy-AXG7nLjaV3Ui47Cf9x9cgId8dZQO6W9gldAkUzw2K_9jFqYgwOTqLc3BWhiC3mQ1GxihtPGXRZowhxcrSxbpqbFkUa5Y24hvRiFLpzziEDKBg8EfoJ-8CZ9qEYqOBYNR51hXB7GHZKErJnvRKCsw9KrkLlvuEQNF-QMo2ULroDgUwIGhTDWjpW_bX5UYMwk11ctaRonK2tdtmG7zhuZFS3kz_goVv1j2KzjAeyoMz6Ls0I" />
+    </item>
+  </cookies>
+</error>

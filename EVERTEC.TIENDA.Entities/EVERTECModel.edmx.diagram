@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="67f16b764ec24cc0b1d894d352fa6b5c" Name="Diagram1">
+        <EntityTypeShape EntityType="EVERTECModel.AspNetRoles" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EVERTECModel.AspNetUserClaims" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EVERTECModel.AspNetUserLogins" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EVERTECModel.AspNetUserRoles" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EVERTECModel.AuditoriaDB" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EVERTECModel.AuditoriaSecurity" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EVERTECModel.AspNetUsers" Width="1.5" PointX="0.75" PointY="2.375" />
+        <EntityTypeShape EntityType="EVERTECModel.Customers" Width="1.5" PointX="3" PointY="9.25" />
+        <EntityTypeShape EntityType="EVERTECModel.Orders" Width="1.5" PointX="5.25" PointY="9.25" />
+        <AssociationConnector Association="EVERTECModel.FK__Customers__Custo__73BA3083" />
+        <AssociationConnector Association="EVERTECModel.FK_AuditoriaDB_AspNetUsersID" />
+        <AssociationConnector Association="EVERTECModel.FK_AuditoriaSecurity_AspNetUsersID" />
+        <AssociationConnector Association="EVERTECModel.FK__Orders__Customer__72C60C4A" />
+        <EntityTypeShape EntityType="EVERTECModel.LogExceptions" Width="1.5" PointX="3" PointY="13.125" />
+        <AssociationConnector Association="EVERTECModel.FK_LogExceptions_AspNetUsersID" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

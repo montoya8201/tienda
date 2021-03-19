@@ -1,0 +1,200 @@
+﻿.card-sigma {
+    background-color: #6C60B5 !important;
+}
+
+.campo-obligatorio-sigma{
+    color:red;
+}
+
+.parsley-custom-error-message {
+    color: #f05050 !important;
+}
+
+.parsley-length {
+    color: #f05050 !important;
+}
+
+.parsley-pattern {
+    color: #f05050 !important;
+}
+.table-sigma {
+    table {
+    }
+
+    thead tr th {
+
+        background-color: #6458AF;
+        text-align: center;
+        color: white !important;
+    }
+
+}
+
+.bg-primary-sigma {
+    background-color: #3A3F51 !important;
+}
+
+.border-primary-sigma {
+    border-color: #3A3F51 !important;
+}
+.page-item.active .page-link {
+    background-color: #6357AE !important;
+    border-color: #6357AE !important;
+}
+
+.sweet-alert.sweetalert-lg {
+    width: 600px;
+}
+
+.sweet-alert.sweetalert-sm {
+    width: 350px;
+
+}
+
+.sweet-alert button {
+    background-color: #3F386B !important;
+}
+
+.content-wrapper .content-heading {
+    padding: 10px !important;
+    margin-bottom : 5px !important;
+}
+
+.scroll-wrap {
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+
+.sweet-alert {
+    box-sizing: border-box;
+    max-height: 100% !important;
+    overflow-y: auto !important;
+    padding: 0 17px 17px !important;
+    width: 512px;
+    //remove margins
+    margin: 0;
+}
+
+.card-footer {
+    background-color: #6C60B5 !important;
+}
+
+.modal-body-sigma {
+    max-height: calc(100vh - 143px);
+
+}
+
+.bannerIUSH {
+    background-image: url('../Images/bg4.jpg');
+}
+
+.btn-IUSH {
+    background-color: #475883;
+    border-color: #475883;
+    color: #fff
+}
+
+.btn-IUSH:hover {
+    background-color: #1F305E;
+    border-color: #1F305E;
+
+    color: #fff
+}
+.sidebar-subnav > li > a,
+.sidebar-subnav > li > .nav-item {
+    display: block;
+    position: relative;
+    padding-top:1px !important;
+    padding-left: 12px !important;/*ok*/
+    font-weight: normal;
+    background-color: transparent !important;
+    color: #515253;
+}
+
+.sidebar li > a, .sidebar li > .nav-item, .sidebar > .sidebar-nav > .nav-heading {
+    white-space: normal !important;
+}
+
+.tree, .tree ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.tree ul {
+    margin-left: 2.3em;
+    position: relative
+}
+
+.tree ul ul {
+    margin-left: .5em
+}
+
+.tree ul:before {
+    content: "";
+    display: block;
+    width: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-left: 1px solid
+}
+
+.tree li {
+    margin: 0;
+    font-weight: 700;
+    position: relative;
+}
+
+.tree ul li:before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 0;
+    border-top: 1px solid;
+    margin-top: -1px;
+    position: absolute;
+    top: 1em;
+    left: 0
+}
+
+.tree ul li:last-child:before {
+    height: auto;
+    top: 1em;
+    bottom: 0
+}
+
+.indicator {
+    margin-right: 5px;
+}
+
+.tree li a {
+    text-decoration: none;
+}
+
+.tree li button, .tree li button:active, .tree li button:focus {
+    text-decoration: none;
+    border: none;
+    background: transparent;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    outline: 0;
+}
+
+
+.tabs_branded .tabs-left > li > a.validation_errors::after,
+.tabs_branded .tabs-left > li > a.validation_errors:hover::after,
+.tabs-left > li > a.validation_errors:focus::after {
+    content: "\f071";
+    font: normal normal normal 14px/1 FontAwesome;
+    position: absolute;
+    color: #FFE613;
+    left: 30px;
+    top: 12px;
+    font-size: 20px;
+}
+.checkbox-alinear-sigma {
+    vertical-align: -11px !important;
+}
