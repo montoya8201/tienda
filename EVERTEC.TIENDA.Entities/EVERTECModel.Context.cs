@@ -33,7 +33,7 @@ namespace EVERTEC.TIENDA.Entities
         public virtual DbSet<AuditoriaSecurity> AuditoriaSecurity { get; set; }
         public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
         public virtual DbSet<Customers> Customers { get; set; }
-        public virtual DbSet<Orders> Orders { get; set; }
         public virtual DbSet<LogExceptions> LogExceptions { get; set; }
+        public virtual DbSet<Orders> Orders { get; set; }
     }
 }

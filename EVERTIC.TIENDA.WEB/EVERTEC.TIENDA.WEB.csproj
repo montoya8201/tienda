@@ -78,10 +78,6 @@
     <Reference Include="FastMember, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FastMember.1.5.0\lib\net461\FastMember.dll</HintPath>
     </Reference>
-    <Reference Include="HGInetFeAPI, Version=2020.6.1.1, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>HGInetAPI\Facturacion Electronica\HGInetFeAPI.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
     </Reference>
@@ -157,6 +153,14 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PlacetoPay.Integrations.Library.CSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59c45d2d166c43f7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\PlacetoPay.Integrations.Library.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=100.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="Rotativa, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Rotativa.1.7.3\lib\net461\Rotativa.dll</HintPath>
@@ -256,8 +260,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ComprasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ParentController.cs" />
     <Compile Include="Controllers\SecurityController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -271,6 +277,8 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\PlacetoPay.Integrations.Library.CSharp.dll" />
+    <Content Include="bin\RestSharp.dll" />
     <Content Include="Content\AccessDenied.css" />
     <Content Include="Content\css\app-rtl.css" />
     <Content Include="Content\css\app.css" />
@@ -365,6 +373,7 @@
     <Content Include="Scripts\modules\charts\morris.js" />
     <Content Include="Scripts\modules\charts\rickshaw.js" />
     <Content Include="Scripts\modules\charts\sparkline.js" />
+    <Content Include="Scripts\modules\comercio\Comercio.js" />
     <Content Include="Scripts\modules\common\bootstrap-start.js" />
     <Content Include="Scripts\modules\common\card-tools.js" />
     <Content Include="Scripts\modules\common\constants.js" />
@@ -401,14 +410,7 @@
     <Content Include="Scripts\modules\maps\vector.map.js" />
     <Content Include="Scripts\modules\pages\pages.js" />
     <Content Include="Scripts\modules\security\Index.js" />
-    <Content Include="Scripts\modules\security\_CrearModulo.js" />
-    <Content Include="Scripts\modules\security\_CrearModuloDetalle.js" />
-    <Content Include="Scripts\modules\security\_CrearRol.js" />
     <Content Include="Scripts\modules\security\_CrearUsuario.js" />
-    <Content Include="Scripts\modules\security\_EditarModulo.js" />
-    <Content Include="Scripts\modules\security\_EditarModuloDetalle.js" />
-    <Content Include="Scripts\modules\security\_EditarRol.js" />
-    <Content Include="Scripts\modules\security\_EditarUsuario.js" />
     <Content Include="ScriptsPropios\parsley.js" />
     <Content Include="ScriptsPropios\Utilidades.js" />
     <Content Include="Vendor\%40fortawesome\fontawesome-free-webfonts\css\fa-brands.css" />
@@ -793,6 +795,12 @@
     <Content Include="Vendor\glob-stream\README.md" />
     <Content Include="Vendor\jqwidgets-framework\jqwidgets\styles\images\Thumbs.db" />
     <Content Include="Views\Home\AccessDenied.cshtml" />
+    <Content Include="Views\Security\CrearCuenta.cshtml" />
+    <Content Include="Views\Compras\CrearOrden.cshtml" />
+    <Content Include="Views\Compras\ResumenOrden.cshtml" />
+    <Content Include="Views\Compras\_Mensaje.cshtml" />
+    <Content Include="Views\Compras\ResultadoPago.cshtml" />
+    <Content Include="Views\Compras\EstadoOrden.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Adjuntos\ProgramasAcademicos\" />
@@ -807,6 +815,7 @@
     <Folder Include="Vendor\jqwidgets-framework\jqwidgets\styles\images\smoothness\" />
     <Folder Include="Vendor\jqwidgets-framework\jqwidgets\styles\images\start\" />
     <Folder Include="Vendor\jqwidgets-framework\jqwidgets\styles\images\sunny\" />
+    <Folder Include="Views\Parent\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
@@ -1004,6 +1013,10 @@
     <ProjectReference Include="..\EVERTEC.TIENDA.CoreBusiness\EVERTEC.TIENDA.CoreBusiness.csproj">
       <Project>{371d1a8a-ab20-4508-bff4-aff808abf384}</Project>
       <Name>EVERTEC.TIENDA.CoreBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EVERTEC.TIENDA.DataAccess\EVERTEC.TIENDA.DataAccess.csproj">
+      <Project>{8E3A78D4-DFC5-478F-B96F-76FBC60CBFFF}</Project>
+      <Name>EVERTEC.TIENDA.DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\EVERTEC.TIENDA.Entities\EVERTEC.TIENDA.Entities.csproj">
       <Project>{daaf64f3-8aac-4f28-8a71-4638b82d0db7}</Project>

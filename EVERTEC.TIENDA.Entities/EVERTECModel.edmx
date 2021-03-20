@@ -57,6 +57,7 @@
           <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
           <Property Name="AccessFailedCount" Type="int" Nullable="false" />
           <Property Name="DateCreated" Type="datetime" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
         </EntityType>
         <EntityType Name="AuditoriaDB">
           <Key>
@@ -115,6 +116,7 @@
           <Property Name="Status" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="CreateAT" Type="datetime" Nullable="false" />
           <Property Name="UpdateAT" Type="datetime" />
+          <Property Name="Valor" Type="float" Nullable="false" />
         </EntityType>
         <Association Name="FK__Customers__Custo__73BA3083">
           <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
@@ -286,7 +288,6 @@
           <EntitySet Name="AuditoriaSecurity" EntityType="Self.AuditoriaSecurity" />
           <EntitySet Name="AspNetUsers" EntityType="EVERTECModel.AspNetUsers" />
           <EntitySet Name="Customers" EntityType="EVERTECModel.Customers" />
-          <EntitySet Name="Orders" EntityType="EVERTECModel.Orders" />
           <AssociationSet Name="FK__Customers__Custo__73BA3083" Association="EVERTECModel.FK__Customers__Custo__73BA3083">
             <End Role="AspNetUsers" EntitySet="AspNetUsers" />
             <End Role="Customers" EntitySet="Customers" />
@@ -299,14 +300,15 @@
             <End Role="AspNetUsers" EntitySet="AspNetUsers" />
             <End Role="AuditoriaSecurity" EntitySet="AuditoriaSecurity" />
           </AssociationSet>
-          <AssociationSet Name="FK__Orders__Customer__72C60C4A" Association="EVERTECModel.FK__Orders__Customer__72C60C4A">
-            <End Role="Customers" EntitySet="Customers" />
-            <End Role="Orders" EntitySet="Orders" />
-          </AssociationSet>
           <EntitySet Name="LogExceptions" EntityType="EVERTECModel.LogExceptions" />
           <AssociationSet Name="FK_LogExceptions_AspNetUsersID" Association="EVERTECModel.FK_LogExceptions_AspNetUsersID">
             <End Role="AspNetUsers" EntitySet="AspNetUsers" />
             <End Role="LogExceptions" EntitySet="LogExceptions" />
+          </AssociationSet>
+          <EntitySet Name="Orders" EntityType="EVERTECModel.Orders" />
+          <AssociationSet Name="FK__Orders__Customer__72C60C4A" Association="EVERTECModel.FK__Orders__Customer__72C60C4A">
+            <End Role="Customers" EntitySet="Customers" />
+            <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
           </EntityContainer>
         <EntityType Name="AspNetUsers">
@@ -329,6 +331,7 @@
           <NavigationProperty Name="AuditoriaDB" Relationship="EVERTECModel.FK_AuditoriaDB_AspNetUsersID" FromRole="AspNetUsers" ToRole="AuditoriaDB" />
           <NavigationProperty Name="AuditoriaSecurity" Relationship="EVERTECModel.FK_AuditoriaSecurity_AspNetUsersID" FromRole="AspNetUsers" ToRole="AuditoriaSecurity" />
           <NavigationProperty Name="LogExceptions" Relationship="EVERTECModel.FK_LogExceptions_AspNetUsersID" FromRole="AspNetUsers" ToRole="LogExceptions" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Customers">
           <Key>
@@ -340,17 +343,6 @@
           <Property Name="Mobile" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="AspNetUsers" Relationship="EVERTECModel.FK__Customers__Custo__73BA3083" FromRole="Customers" ToRole="AspNetUsers" />
           <NavigationProperty Name="Orders" Relationship="EVERTECModel.FK__Orders__Customer__72C60C4A" FromRole="Customers" ToRole="Orders" />
-        </EntityType>
-        <EntityType Name="Orders">
-          <Key>
-            <PropertyRef Name="OrderID" />
-          </Key>
-          <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="CustomerID" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Name="Status" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="CreateAT" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="UpdateAT" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="Customers" Relationship="EVERTECModel.FK__Orders__Customer__72C60C4A" FromRole="Orders" ToRole="Customers" />
         </EntityType>
         <Association Name="FK__Customers__Custo__73BA3083">
           <End Type="EVERTECModel.AspNetUsers" Role="AspNetUsers" Multiplicity="1" />
@@ -388,18 +380,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Orders__Customer__72C60C4A">
-          <End Type="EVERTECModel.Customers" Role="Customers" Multiplicity="1" />
-          <End Type="EVERTECModel.Orders" Role="Orders" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Customers">
-              <PropertyRef Name="CustomerID" />
-            </Principal>
-            <Dependent Role="Orders">
-              <PropertyRef Name="CustomerID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityType Name="LogExceptions">
           <Key>
             <PropertyRef Name="LogExceptionID" />
@@ -422,6 +402,30 @@
             </Principal>
             <Dependent Role="LogExceptions">
               <PropertyRef Name="UsuarioID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerID" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CreateAT" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdateAT" Type="DateTime" Precision="3" />
+          <Property Name="Valor" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Customers" Relationship="EVERTECModel.FK__Orders__Customer__72C60C4A" FromRole="Orders" ToRole="Customers" />
+        </EntityType>
+        <Association Name="FK__Orders__Customer__72C60C4A">
+          <End Type="EVERTECModel.Customers" Role="Customers" Multiplicity="1" />
+          <End Type="EVERTECModel.Orders" Role="Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customers">
+              <PropertyRef Name="CustomerID" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="CustomerID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -500,6 +504,7 @@
           <EntitySetMapping Name="AspNetUsers">
             <EntityTypeMapping TypeName="EVERTECModel.AspNetUsers">
               <MappingFragment StoreEntitySet="AspNetUsers">
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
                 <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
                 <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
@@ -525,17 +530,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Orders">
-            <EntityTypeMapping TypeName="EVERTECModel.Orders">
-              <MappingFragment StoreEntitySet="Orders">
-                <ScalarProperty Name="UpdateAT" ColumnName="UpdateAT" />
-                <ScalarProperty Name="CreateAT" ColumnName="CreateAT" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
-                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="LogExceptions">
             <EntityTypeMapping TypeName="EVERTECModel.LogExceptions">
               <MappingFragment StoreEntitySet="LogExceptions">
@@ -546,6 +540,18 @@
                 <ScalarProperty Name="Fecha" ColumnName="Fecha" />
                 <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
                 <ScalarProperty Name="LogExceptionID" ColumnName="LogExceptionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="EVERTECModel.Orders">
+              <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="UpdateAT" ColumnName="UpdateAT" />
+                <ScalarProperty Name="CreateAT" ColumnName="CreateAT" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -31,6 +31,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,14 +49,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonCoreBusiness.cs" />
+    <Compile Include="CustomersCoreBusiness.cs" />
+    <Compile Include="Interfaces\ICustomersCoreBusiness.cs" />
     <Compile Include="Interfaces\ILogExceptionsCoreBusiness.cs" />
+    <Compile Include="Interfaces\IOrdersCoreBusiness.cs" />
     <Compile Include="LogExceptionsCoreBusiness.cs" />
+    <Compile Include="OrdersCoreBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EVERTEC.TIENDA.DataAccess\EVERTEC.TIENDA.DataAccess.csproj">
       <Project>{8e3a78d4-dfc5-478f-b96f-76fbc60cbfff}</Project>
       <Name>EVERTEC.TIENDA.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EVERTEC.TIENDA.Entities\EVERTEC.TIENDA.Entities.csproj">
+      <Project>{DAAF64F3-8AAC-4F28-8A71-4638B82D0DB7}</Project>
+      <Name>EVERTEC.TIENDA.Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -19,6 +19,7 @@ namespace EVERTEC.TIENDA.Entities
         public string Status { get; set; }
         public System.DateTime CreateAT { get; set; }
         public Nullable<System.DateTime> UpdateAT { get; set; }
+        public double Valor { get; set; }
     
         public virtual Customers Customers { get; set; }
     }

@@ -63,7 +63,6 @@
   "node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.js",
   "node_modules/bootstrap-filestyle/src/bootstrap-filestyle.js",
   "node_modules/jquery-validation/dist/jquery.validate.js",
-  "node_modules/jquery-validation/dist/additional-methods.js",
   "node_modules/jquery-steps/build/jquery.steps.js",
   "node_modules/x-editable/dist/bootstrap3-editable/img/**/*",
   "node_modules/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css",

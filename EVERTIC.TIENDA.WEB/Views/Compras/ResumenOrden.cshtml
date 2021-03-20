@@ -1,0 +1,119 @@
+﻿@model List<EVERTEC.TIENDA.Entities.Orders>
+@using System.Globalization;
+
+@{
+    ViewBag.Title = "Resumen de la orden";
+
+    string Fecha = string.Empty;
+}
+<div class="content-heading">
+    <div>
+        Resumen de la orden
+        <small>Formulario para ver el resumen de la orden y poder pagar</small>
+    </div>
+</div>
+<div class="card card-sigma">
+    <!-- START card-->
+    <div class="card card-flat">
+
+        <div class="card-body">
+            @if (ViewBag.Error != null)
+            {
+                <div class="alert alert-danger" role="alert">
+                    @ViewBag.Error
+                </div>
+            }
+            else
+            {
+                <div class=" container-fluid table-responsive">
+                    <table id="tblListarOrdenesDeCompra" class="table table-condensed table-bordered table-hover table-sigma" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Orden Nro</th>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Fecha</th>
+                                <th>Pagar</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                Fecha = item.CreateAT.ToString("dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                                <tr>
+                                    <td class=" text-center">
+                                        @item.OrderID
+                                    </td>
+                                    <td class=" text-left">
+                                        PLAY STATION
+                                    </td>
+                                    <td class=" text-center">
+                                        1
+                                    </td>
+                                    <td class=" text-center">
+                                        @Fecha
+                                    </td>
+
+                                    <td class=" text-center">
+                                        <button title="Pagar" data-toggle="tooltip" data-placement="right" class="btn btn-sm btn-outline-green btn-circle" onclick="operacionesComercio.iniciarPago(@item.OrderID)" ><em class="fa-2x fas fa-credit-card"></em></button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+    <!-- END card-->
+
+</div>
+
+
+@section Scripts {
+
+
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+
+
+            $('#tblListarOrdenesDeCompra').DataTable({
+
+                "language": {
+                    "sProcessing": "Procesando...",
+                    "sLengthMenu": "Mostrar _MENU_ registros",
+                    "sZeroRecords": "No se encontraron resultados",
+                    "sEmptyTable": "Ningún dato disponible en esta tabla",
+                    "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                    "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                    "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+                    "sInfoPostFix": "",
+                    "sSearch": "Buscar:",
+                    "sUrl": "",
+                    "sInfoThousands": ",",
+                    "sLoadingRecords": "Cargando...",
+                    "oPaginate": {
+                        "sFirst": "Primero",
+                        "sLast": "Último",
+                        "sNext": "Siguiente",
+                        "sPrevious": "Anterior"
+                    },
+                    "oAria": {
+                        "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
+                        "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                    }
+                },
+                "scrollX": true,
+                "lengthMenu": [[10, 20, 50, 100], [10, 20, 50, 100]]
+            });
+
+
+        });
+
+    </script>
+}
