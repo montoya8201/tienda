@@ -53,9 +53,17 @@ namespace EVERTEC.TIENDA.CoreBusiness
             throw new NotImplementedException();
         }
 
-        public Task<Orders> FindAsync(Expression<Func<Orders, bool>> match)
+        public new async Task<Orders> FindAsync(Expression<Func<Orders, bool>> match)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return await base.FindAsync(match);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public List<Orders> FindWhere(Expression<Func<Orders, bool>> match)
@@ -90,8 +98,12 @@ namespace EVERTEC.TIENDA.CoreBusiness
         {
             try
             {
-                entity.UpdateAT = DateTime.Now;
-                await base.UpdateAsync(entity);
+                Orders orders = await this.FindAsync(x => x.OrderID == entity.OrderID);
+
+                orders.UpdateAT = DateTime.Now;
+                orders.Status = entity.Status;
+
+                await base.UpdateAsync(orders);
             }
             catch (Exception)
             {

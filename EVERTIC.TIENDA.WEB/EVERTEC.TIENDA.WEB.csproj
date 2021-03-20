@@ -277,6 +277,8 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\PlacetoPay.Integrations.Library.CSharp.dll" />
+    <Content Include="bin\RestSharp.dll" />
     <Content Include="Content\AccessDenied.css" />
     <Content Include="Content\css\app-rtl.css" />
     <Content Include="Content\css\app.css" />
@@ -796,6 +798,9 @@
     <Content Include="Views\Security\CrearCuenta.cshtml" />
     <Content Include="Views\Compras\CrearOrden.cshtml" />
     <Content Include="Views\Compras\ResumenOrden.cshtml" />
+    <Content Include="Views\Compras\_Mensaje.cshtml" />
+    <Content Include="Views\Compras\ResultadoPago.cshtml" />
+    <Content Include="Views\Compras\EstadoOrden.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Adjuntos\ProgramasAcademicos\" />

@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Resultado del pago";
+}
+<div class="content-heading">
+    <div>
+        Resultado del pago
+        <small>Formulario que muestra el reseultado de la transacción del pago realizado</small>
+    </div>
+</div>
+<div class="card  card-sigma">
+    <!-- START card-->
+    <div class="card card-flat">
+
+        <div class="card-body">
+            <div class="card ">
+                <div class=" card-body text-center">
+                    <h3>ESTADO DE LA TRANSACCIÓN</h3>
+                </div>
+            </div>
+            @switch (@Model.Status.status)
+            {
+                case "APPROVED":
+                    <div class="text-success text-center">APROBADO</div>
+                    break;
+                case "REJECTED":
+                    <div class="text-danger text-center">RECHAZADO</div>
+                    break;
+                case "FAILED":
+                    <div class="text-danger text-center">FALLÓ</div>
+                    break;
+                case "PENDING":
+                    <div class="text-info text-center">PENDIENTE</div>
+                    break;
+            }
+
+            <br />
+            <br />
+
+            <div class=" text-center">
+                <button class="btn btn-IUSH" onclick="retornar()"> Retornar</button>
+
+            </div>
+        </div>
+    </div>
+    <!-- END card-->
+
+</div>
+
+
+@section Scripts {
+
+
+
+    <script type="text/javascript">
+
+        function retornar() {
+            window.location = rootHost + "Home/Index";
+        }
+
+    </script>
+}

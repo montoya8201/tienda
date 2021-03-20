@@ -52,9 +52,8 @@ namespace EVERTEC.TIENDA.WEB.Controllers
 
         public ActionResult Index() => View();
 
-        public ActionResult UsersOnline() => View();
+    
 
-        #region Admnistar Usuarios
 
 
 
@@ -102,9 +101,6 @@ namespace EVERTEC.TIENDA.WEB.Controllers
                 return Json(new { error = Mensaje }, JsonRequestBehavior.AllowGet);
             }
         }
-
-
-        #endregion Administar Usuarios
 
 
 
